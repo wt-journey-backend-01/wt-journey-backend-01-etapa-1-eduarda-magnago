@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #1B2519;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 700px;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 176px;
+  height: 176px;
+}
+
+.titulo {
+  font-size: 55px;
+  font-weight: 900;
+  color: #fff;
+  position: relative;
+  line-height: 1;
+}
+
+.titulo::after {
+  content: 'DEVBURGER';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: transparent;
+  -webkit-text-stroke: 2px #DDDDDD;
+  z-index: -1;
+}
+
+.titulo-contato {
+  font-size: 55px;
+  font-weight: 900;
+  color: #fff;
+  position: relative;
+  line-height: 1;
+}
+
+.titulo-contato::after{
+  content: 'CONTATO';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: transparent;
+  -webkit-text-stroke: 2px #DDDDDD;
+  z-index: -1;
+}
+
+.titulo-lanches {
+  font-size: 55px;
+  font-weight: 900;
+  color: #fff;
+  position: relative;
+  line-height: 1;
+}
+
+.titulo-lanches::after{
+  content: 'CARDÁPIO';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: transparent;
+  -webkit-text-stroke: 2px #DDDDDD;
+  z-index: -1;
+}
+
+.subtitulo-contato{
+  gap: 20px;
+  margin-bottom: 20px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.botoes {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin-bottom: 45px;
+  flex-wrap: wrap;
+}
+
+.botao {
+  background-color: #ECECEC;
+  color: #000;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  width: 232px;
+  height: 56px;
+  line-height: 56px;
+  transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+  background-color: #d9d9d9; 
+}
+
+.descricao {
+  color: #989F57;
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.formulario {
+  text-align: left;
+  max-width: 100%;
+}
+
+.formulario label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 15.25px;
+  font-weight: 400;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 99%;
+  padding: 12px;
+  border: 1.5px solid #929873;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  background-color: #1B2519;
+  color: #fff;
+  font-size: 14px;
+}
+
+.formulario textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.enviar {
+  display: block;
+  margin-left: auto;
+  background-color: #989F57;
+  color: #131313;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.enviar:hover {
+  background-color: #858b4c; 
+}
+
+.lanche-card {
+  background-color: #2C3B2C;
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.lanche-nome {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #DDDDDD;
+}
+
+.lanche-ingredientes {
+  font-size: 16px;
+  color: #C5C5C5;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 32px 20px; 
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .logo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .titulo {
+    font-size: 38px;
+  }
+
+  .botoes {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .botao {
+    width: 100%;
+    max-width: none;
+    height: 56px;
+    line-height: 56px;
+  }
+
+  .descricao {
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .formulario input,
+  .formulario textarea,
+  .enviar {
+    width: 100%;
+  }
+
+  .enviar {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
